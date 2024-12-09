@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Http\Middleware\LocaleMiddleware;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -60,7 +61,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::middleware('web')
+        Route::middleware(['web', LocaleMiddleware::class])
             ->namespace($this->namespace)
             ->group(base_path('routes/web.php'));
     }

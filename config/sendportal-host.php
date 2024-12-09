@@ -13,6 +13,7 @@ return [
     'locale' => [
         'supported' => [
             'en' => ['name' => 'English', 'native' => 'English'],
+            'tr' => ['name' => 'Turkish', 'native' => 'Türkçe'],
         ],
     ],
 
@@ -38,5 +39,5 @@ return [
     | For more information see https://laravel.com/docs/master/routing#rate-limiting
     |
     */
-    'throttle_middleware' => 'throttle:'.env('SENDPORTAL_THROTTLE_MIDDLEWARE', '60,1'),
+    'throttle_middleware' => 'throttle:' . env('SENDPORTAL_THROTTLE_MIDDLEWARE', '60,1'),
 ];

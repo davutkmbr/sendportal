@@ -15,7 +15,7 @@ apps:
     interpreter: php
     script: artisan
     exec_mode: fork
-    instances: 3
+    instances: 1
     autorestart: true
     restart_delay: 0
     cron_restart: "0 11 * * *"
